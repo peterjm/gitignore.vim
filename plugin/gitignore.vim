@@ -5,6 +5,7 @@ if filereadable(filename)
         let line = substitute(oline, '\s|\n|\r', '', "g")
         if line =~ '^#' | con | endif
         if line == '' | con  | endif
+        if line =~ 'database.yml' | con  | endif
         if line =~ '^!' | con  | endif
         if line =~ '/$' | let igstring .= "," . line . "*" | con | endif
         let igstring .= "," . line
